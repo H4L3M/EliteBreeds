@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.add.AddPigeonFragment">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/pigeon_image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_margin="16dp"
+        android:background="@color/cardview_dark_background"
+        android:contentDescription="@string/pigeon_image"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundPercent="1"
+        app:srcCompat="@drawable/ic_pigeon" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/black"
+        android:padding="4dp"
+        android:contentDescription="@string/action_add"
+        android:src="@drawable/ic_round_add_photo"
+        app:layout_constraintBottom_toBottomOf="@+id/pigeon_image"
+        app:layout_constraintEnd_toEndOf="@+id/pigeon_image"
+        app:layout_constraintTop_toTopOf="@+id/pigeon_image"
+        app:layout_constraintVertical_bias="0.931"
+        app:roundPercent="1" />
+
+    <RadioGroup
+        android:id="@+id/pigeon_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pigeon_image">
+
+        <RadioButton
+            android:id="@+id/choice_alive"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_alive"
+            android:buttonTint="@color/white"
+            android:padding="8dp"
+            android:text="@string/action_alive"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/choice_for_sale"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_for_sale"
+            android:buttonTint="@color/white"
+            android:padding="8dp"
+            android:text="@string/action_for_sale"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/choice_sold"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_sold"
+            android:buttonTint="@color/white"
+            android:padding="8dp"
+            android:text="@string/action_sold"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/choice_dead"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_dead"
+            android:buttonTint="@color/white"
+            android:padding="8dp"
+            android:text="@string/action_dead"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/pigeon_name"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="16dp"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pigeon_status" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/pigeon_type"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="16dp"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pigeon_name" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/pigeon_birth"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="16dp"
+        android:layout_marginTop="276dp"
+        android:background="@color/teal_200"
+        android:inputType="datetime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pigeon_type" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
