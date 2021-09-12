@@ -21,5 +21,8 @@
     <string name="action_for_sale">For Sale </string>
     <string name="action_sold">Sold </string>
     <string name="action_dead">Dead </string>
+    <string name="hint_pigeon_name">Pigeon Name</string>
+    <string name="hint_pigeon_type">Pigeon Type</string>
+    <string name="hint_pigeon_birth">Pigeon Birth</string>
 
 </resources>
